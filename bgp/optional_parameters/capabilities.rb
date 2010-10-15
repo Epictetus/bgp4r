@@ -1,6 +1,6 @@
 require 'bgp/optional_parameters/capability'
 
-%w{ mbgp orf route_refresh as4 graceful_restart dynamic }.each do |c|
+%w{ mbgp orf route_refresh as4 graceful_restart dynamic add_path}.each do |c|
     BGP::OPT_PARM::CAP.autoload  "#{c}".capitalize.to_sym,"bgp/optional_parameters/#{c}"
 end
 
